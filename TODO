@@ -8,5 +8,14 @@ Learning Python:
 
     5 Mini Python Projects - For Beginners from Tech with Tim
     https://www.youtube.com/watch?v=DLn3jOsNRVE
-    2 games complete
+    ✔ Tutorial Complete @done(13:58 - 28/06/22)
+
+    Python Website Full Tutorial - Flask, Authentication, Databases & More
+    https://www.youtube.com/watch?v=dam0GPOAvVI
+      THings I installed:
+        pip install flask --user
+        pip install flask-login   
+        pip install flask-sqlalchemy  
+    
     ☐ Tutorial Complete
+        28/6/ - Stopped at 9 min, getting an import error I don't understand
