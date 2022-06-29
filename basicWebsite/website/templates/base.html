@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link type="text/css" href="{{ url_for('static', filename='base.css') }}" rel="stylesheet" >
+        
+        <title>{% block title %}Home{% endblock %}</title>
+    </head>
+
+    <body>
+        
+        <nav class="navbar">
+            <span><a href="/login" id="login">Login</a></span>
+            <span><a href="/logout" id="logout">Logout</a></span>
+            <span><a href="/sign-up" id="signUp">Sign Up</a></span>
+            <span><a href="/" id="home">Home</a></span>
+        </nav>
+
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+
+    </body>
+</html>
