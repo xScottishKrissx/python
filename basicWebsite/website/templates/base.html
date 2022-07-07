@@ -13,10 +13,13 @@
     <body>
         
         <nav class="navbar">
-            <span><a href="/login" id="login">Login</a></span>
-            <span><a href="/logout" id="logout">Logout</a></span>
-            <span><a href="/sign-up" id="signUp">Sign Up</a></span>
-            <span><a href="/" id="home">Home</a></span>
+            {% if user.is_authenticated %}
+                <span><a href="/" id="home">Home</a></span>
+                <span><a href="/logout" id="logout">Logout</a></span>
+            {%else%}
+                <span><a href="/login" id="login">Login</a></span>
+                <span><a href="/sign-up" id="signUp">Sign Up</a></span>
+            {%endif%}
         </nav>
 
         {% with messages = get_flashed_messages(with_categories=true) %}
@@ -39,7 +42,7 @@
                             </button>
                         </div>
                     {%endif%}
-                    
+
                 {% endfor %}
             {% endif %}
         {% endwith %}
