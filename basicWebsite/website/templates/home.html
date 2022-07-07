@@ -3,5 +3,19 @@
 
 
 {% block content %}
-    <h1>This is the home page</h1>
+
+<h1>Notes:</h1>
+    <ul id="notes">
+        {% for note in user.notes %}
+            <li class="list-item">{{ note.text }}</li>
+        {%endfor%}
+    </ul>
+    
+    <form action="" method="POST">
+        <textarea name="note" id="note" cols="30" rows="10" class="formControl"></textarea>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
 {% endblock %}
